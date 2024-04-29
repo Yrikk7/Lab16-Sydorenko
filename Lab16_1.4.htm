@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title> zavd 1.4 </title>
+        <style>            
+            body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0; 
+        }
+        </style>
+    </head>   
+    <form>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <p id="demo"></p>
+    </form>      
+        <script>
+            const Pre = document.getElementById('demo');
+            const NDgers = document.querySelectorAll('input');
+            NDgers.forEach(NDger => {
+                NDger.addEventListener('blur', () => {
+                    const value = NDger.value;
+                     Pre.textContent += value + ' ';
+                      
+                });                
+        }); 
+             
+        </script>
+    </body>
+</html>

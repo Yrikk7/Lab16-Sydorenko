@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title> zavd 1.6 </title>
+        <style>            
+            body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0; 
+        }
+        </style>
+    </head>   
+    <form>
+        <p> 26 </p>
+        <p> 6 </p>
+        <p> 12 </p>
+    </form>      
+        <script>           
+            const NDgers = document.querySelectorAll('p');
+            NDgers.forEach(NDger => {
+                NDger.addEventListener('click', () => {
+                    const numb =parseInt(NDger.textContent);
+                    const ger =  Math.pow(numb,2);
+                    alert(ger)                     
+                });                
+        }); 
+             
+        </script>
+    </body>
+</html>

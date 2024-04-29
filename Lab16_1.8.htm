@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title> zavd 1.8 </title>
+        <style>            
+            body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0; 
+        }
+            .green {
+                border-color: green ;
+            }
+            .red {
+                border-color: red ;
+            }
+        </style>
+    </head>
+    <body>
+       <div>1</div>
+       <div>2</div>
+       <div>3</div>
+        <script>           
+            function MouseOver(event) {
+                event.classList.remove('red');
+                event.classList.add('green');
+            }
+           
+            function MouseOut(event) {
+                event.classList.remove('green');
+                event.classList.add('red');
+            }  
+            
+            const NDgers = document.querySelectorAll('div');
+            NDgers.forEach(NDger => {
+                while(true){
+                    NDger.addEventListener('click', MouseOver);
+                    NDger.addEventListener('click', MouseOut);
+                }               
+            });   
+            
+            // NDgers.forEach(NDger => {
+            //     NDger.removeEventListener('mouseover', MouseOver);
+            //     NDger.removeEventListener('mouseout', MouseOut);
+            // });
+        </script>
+    </body>
+</html>

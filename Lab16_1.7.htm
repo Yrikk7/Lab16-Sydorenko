@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title> zavd 1.7 </title>
+        <style>            
+            body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0; 
+        }
+            .green {
+                border-color: green ;
+            }
+            .red {
+                border-color: red ;
+            }
+        </style>
+    </head>   
+    <form>
+    <input type="text" data-length = 4>
+    <input type="text" data-length = 6>
+    <input type="text" data-length = 5>    
+    </form>      
+        <script>           
+            const NDgers = document.querySelectorAll('input');            
+            NDgers.forEach(NDger => {                
+                    NDger.addEventListener('blur', () => {
+                        const fer = parseInt(NDger.getAttribute('data-length')); 
+                        const ger = NDger.value.length;
+                        if(ger === fer) {
+                            NDger.classList.remove('red');
+                            NDger.classList.add('green');
+                        }
+                        else {
+                            NDger.classList.remove('green');
+                            NDger.classList.add('red');
+                        }
+                });                                
+        });              
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title> zavd 1.2 </title>
+        <style>            
+            body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0; 
+        }
+        </style>
+    </head>
+    <body>
+       <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener"> Довідник_№1 </a>
+       <a href="https://www.youtube.com/watch?v=RMVxRWsaDxk&t=381s&ab_channel=%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B9%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9"> Довідник_№2 </a>
+       <a href="https://developer.mozilla.org/ru/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"> Довідник_№3 </a>
+        <script>
+            const NDgers = document.querySelectorAll('a');
+            NDgers.forEach(NDger => {
+            NDger.addEventListener('mouseover', () => {
+            const linkText = NDger.textContent;
+            NDger.title = linkText;
+            /*NDger.setAttribute('title', linkText);  */  
+            });            
+        }); 
+             
+        </script>
+    </body>
+</html>

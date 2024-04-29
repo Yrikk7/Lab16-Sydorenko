@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title> zavd 1.5 </title>
+        <style>            
+            body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0; 
+        }
+        </style>
+    </head>   
+    <form>
+    <input type="text">
+    <input type="text">
+    <input type="text">    
+    </form>      
+        <script>           
+            const NDgers = document.querySelectorAll('input');            
+            NDgers.forEach(NDger => {                
+                    NDger.addEventListener('click', () => {
+                        if(!NDger.clicked){
+                            alert(NDger.value);
+                            NDger.clicked= true;
+                        }                                                       
+                });    
+                               
+        }); 
+             
+        </script>
+    </body>
+</html>
